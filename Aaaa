@@ -1,0 +1,7 @@
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+dependencies {
+    implementation 'org.opencv:opencv-android:4.4.0'
+    implementation 'org.openftc:openftc-easyopencv:2.0.0'
+}
