@@ -1,0 +1,6 @@
+dependencies {
+    implementation 'org.opencv:opencv:4.5.0'
+    implementation 'org.bytedeco:javacpp-presets:4.5.0-1.5.4'
+    implementation 'org.openftc:opencv-robo:4.5.0'
+    implementation 'org.openftc:easyopencv:4.5.0'
+}
