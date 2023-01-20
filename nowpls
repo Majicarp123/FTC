@@ -1,0 +1,5 @@
+SleeveDetection.ParkingPosition position;
+
+while (!isStarted() && !isStopRequested()) {
+    position = sleeveDetection.getPosition();
+}
