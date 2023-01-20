@@ -1,0 +1,3 @@
+java.lang. NullPointerException: Attempt to invoke virtual method
+*org. firstinspires. ftc. teamcode. SleeveDetectionSParkingPosition org.firstinspires.ftc. teamcode. SleeveDetection. getPosition(' on a null object reference
+java.lang.NulIPointerException: Attempt to invoke virtual method
