@@ -1,0 +1,16 @@
+#include <PRIZM.h>
+PRIZM prizm;
+void setup() {
+prizm. PrizmBegin();
+prizm.setMotorInvert(2, 1);
+Serial.begin(9600);
+void loop() {
+prizm.setMotor Targets(180, 1440, 180, 1440); //Each motor rotation = 1440 encoder counts
+while(prizm.readMotorBusy(1)==1)
+{
+Serial.print(prizm. readEncoderCount(1));
+Serial.printin("counts");
+}
+prizm.setMotorSpeeds(0,0); prizm.resetEncoders;
+delay(1000);
+}
