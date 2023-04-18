@@ -1,0 +1,33 @@
+
+#include <PRIZM.h>
+I/ library for PRIZM
+#include <APDS9960.h> // library for Adafruit APDS9960 gesture sensor
+PRIZM prizm;
+APDS9960 apds;
+I/ instantiate class name for PRIZM
+// instantiate class name for APDS gesture sensor
+// Light level value variables (unsigned 16 bit)
+uint16_t ambient_light = 0;
+uint16_t red_light = 0;
+uint16_t green_light = 0;
+uint16_t blue_light = 0;
+void setup() {
+prizm.PrizmBegin(): // Initalize PRIZM; wait here for press of green start button on PRIZM
+apds.init();
+// initialize and configure 9960 sensor
+apds.enableLightSensor(false); // enable the color sensor without interrupts prizm.setMotorinvert(2, 1);
+Serial.begin (9600); // Initialize serial port 9600 baud
+delay(500);
+}
+void loop() (
+apds.readAmbientLight(ambient_light);
+apds.readRedLight(red _light); apds.readGreenLight(green_light); apds.readBlueLight(blue_light);
+if (blue_light<20)
+prizm.setMotorSpeeds (360,360);
+delay(2000);
+else if (blue_light>20 && blue_light<40)
+prizm.setMotorSpeeds(-360,-360);
+delay(2000);
+else
+prizm.setMotorSpeeds(360,-360);
+delay(2000);
